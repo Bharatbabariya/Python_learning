@@ -1,0 +1,180 @@
+Departments
+
+Dept_ID
+Dept_Name
+
+
+CREATE TABLE Departments
+(
+  Dept_ID  INT NOT NULL PRIMARY KEY,
+  Dept_Name CHAR(20) NOT NULL
+ );
+ 
+ 
+Categoried
+
+Category_ID
+Category_Dept_ID
+Category_Name
+
+CREATE TABLE Categoried
+(
+  Category_ID  INT NOT NULL PRIMARY KEY,
+  Category_Dept_ID  INT NOT NULL ,
+  Category_Name CHAR(20) 
+ );
+ 
+Products
+
+Product_ID
+Product_Category_ID
+Product_Name
+Product_description
+Product_Price
+Product_Image
+
+
+CREATE TABLE Products
+(
+  Product_ID  INT NOT NULL PRIMARY KEY,
+  Product_Category_ID  INT NOT NULL ,
+  Product_Name CHAR(20) ,
+  Product_description CHAR(60) ,
+  Product_Price float,
+  Product_Image CHAR(60)
+ );
+ 
+ 
+Order_Items
+
+Order_Item_ID
+Order_Item_order_id
+Order_Item_product_ID
+Order_Item_Quantity
+Order_Item_subtotal
+Order_Item_product_price
+
+
+CREATE TABLE Order_Items
+(
+  Order_Item_ID  INT NOT NULL PRIMARY KEY,
+  Order_Item_order_id  INT NOT NULL ,
+  Order_Item_product_ID  INT NOT NULL ,
+  Order_Item_Quantity int ,
+  Order_Item_subtotal float,
+  Order_Item_product_price float
+	 
+ );
+ 
+Orders
+
+Order_ID
+Order_date
+Order_customer
+Order_status
+
+
+CREATE TABLE Orders
+(
+  Order_ID  INT NOT NULL PRIMARY KEY,
+  Order_date  CHAR(12) ,
+  Order_customer int NOT NULL ,
+  Order_status float
+	 
+ );
+ 
+ 
+
+Customers
+
+Customer_ID
+Customer_Fname
+Customer_Lname
+Customer_Email
+Customer_password
+Customer_Street
+Customer_City
+Customer_State
+Customer_Zipcode
+
+CREATE TABLE Customers
+(
+  Customer_ID  INT NOT NULL PRIMARY KEY,
+  Customer_Fname  CHAR(30) ,
+  Customer_Lname  CHAR(30) ,
+  Customer_Email  CHAR(30) ,
+  Customer_password  CHAR(30) ,
+  Customer_Street  CHAR(90) ,
+  Customer_City  CHAR(20) ,
+  Customer_State  CHAR(20) ,
+  Customer_Zipcode  CHAR(20) ,
+
+ );
+ 
+ 
+ 
+ 
+ 
+ 
+ CREATE TABLE Customers
+(
+  Customer_ID  INT NOT NULL PRIMARY KEY,
+  Customer_Fname  CHAR(30) ,
+  Customer_Lname  CHAR(30) ,
+  Customer_Email  CHAR(30) ,
+  Customer_password  CHAR(30) ,
+  Customer_Street  CHAR(90) ,
+  Customer_City  CHAR(20) ,
+  Customer_State  CHAR(20) ,
+  Customer_Zipcode  CHAR(20) 
+ );
+ CREATE TABLE Orders
+(
+  Order_ID  INT NOT NULL PRIMARY KEY,
+  Order_date  CHAR(12) ,
+  Order_customer int NOT NULL ,
+  Order_status float 
+	 
+ );
+ 
+ CREATE TABLE Order_Items
+(
+  Order_Item_ID  INT NOT NULL PRIMARY KEY,
+  Order_Item_order_id  INT NOT NULL ,
+  Order_Item_product_ID  INT NOT NULL ,
+  Order_Item_Quantity int ,
+  Order_Item_subtotal float,
+  Order_Item_product_price float
+	 
+ );
+ 
+ 
+ CREATE TABLE Products
+(
+  Product_ID  INT NOT NULL PRIMARY KEY,
+  Product_Category_ID  INT NOT NULL ,
+  Product_Name CHAR(20) ,
+  Product_description CHAR(60) ,
+  Product_Price float,
+  Product_Image CHAR(60)
+ );
+ 
+ 
+ CREATE TABLE Categoried
+(
+  Category_ID  INT NOT NULL PRIMARY KEY,
+  Category_Dept_ID  INT NOT NULL ,
+  Category_Name CHAR(20) 
+ );
+ 
+ 
+ CREATE TABLE Departments
+(
+  Dept_ID  INT NOT NULL PRIMARY KEY,
+  Dept_Name CHAR(20) NOT NULL
+ );
+ 
+ 
+ 
+ 
+ 
